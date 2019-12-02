@@ -1,0 +1,33 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title>Swap the Character</title>
+</head>
+<div class="swap_cahr">
+    <h1>Swap the Character demo</h1>
+    <input type="text" id="fac_text" placeholder="Enter value" />
+    <button id="btn" onClick="swap_cahr(document.getElementById('fac_text').value)">Result</button>
+    <h3>your result is : <span id="result"></span></h3>
+</div>
+<script type="text/javascript">
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        document.getElementById("btn").click();
+    }
+});
+
+function swap_cahr(val) {
+    var result = "";
+    for (var i = 0; i < val.length; i++) {
+        if (val[i] === val[i].toLowerCase()) {
+            result += val[i].toUpperCase();
+        } else {
+            result += val[i].toLowerCase();
+        }
+    }
+    document.getElementById('result').innerHTML = result;
+}
+</script>
+
+</html

@@ -1,0 +1,40 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title>Prime</title>
+</head>
+<div class="factorial">
+    <h1>Prime Numbers demo</h1>
+    <input type="text" id="fac_text" placeholder="Enter value" />
+    <button id="btn" onClick="prime(document.getElementById('fac_text').value)">Result</button>
+    <h3>your result is : <span id="result"></span></h3>
+</div>
+<script type="text/javascript">
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        document.getElementById("btn").click();
+    }
+});
+
+function isPrime(num) {
+    for (var j = 2; j < num; j++) {
+        if (num % j === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function prime(n) {
+    var result = [2];
+    for (var i = 3; i <= n; i += 2) {
+        if (isPrime(i)) {
+            result.push(i);
+        }
+    }
+    document.getElementById('result').innerHTML = result;
+}
+</script>
+
+</html

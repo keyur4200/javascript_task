@@ -1,0 +1,33 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title>Base</title>
+</head>
+<div class="factorial">
+    <h1>Base demo</h1>
+    <input type="text" id="base1" placeholder="Enter value" />
+    <input type="text" id="base2" placeholder="Enter value" />
+    <input type="text" id="base3" placeholder="Enter value" />
+    <button id="btn" onClick="base(document.getElementById('base1').value, document.getElementById('base2').value, document.getElementById('base3').value);">Result</button>
+    <h3>your result is : <span id="result"></span></h3>
+</div>
+<script type="text/javascript">
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        document.getElementById("btn").click();
+    }
+});
+
+
+function base(num, value, convert) {
+    if ((value && convert) < 2 || (value && convert) > 36) {
+        return 'Please enter bases value between 2 and 36';
+    }
+
+    var result = parseInt(num + '', value).toString(convert);
+    document.getElementById('result').innerHTML = result;
+}
+</script>
+
+</html

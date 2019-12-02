@@ -1,0 +1,22 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title>Document Width</title>
+</head>
+<div class="factorial">
+    <h1>Document Width demo</h1>
+    <h3>Window width and height : <span id="result"></span></h3>
+</div>
+<script type="text/javascript">
+function document_size() {
+    var w = document.documentElement.clientWidth;
+    var h = document.documentElement.clientHeight;
+    document.getElementById('result').innerHTML = "Width: " + w + " Height: " + h;
+}
+
+document_size();
+window.addEventListener("resize", document_size);
+</script>
+
+</html

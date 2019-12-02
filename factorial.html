@@ -1,0 +1,34 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title>factorial</title>
+</head>
+<div class="factorial">
+    <h1>factorial demo</h1>
+    <input type="text" id="fac_text" placeholder="Enter value" />
+    <button id="btn" onClick="factorial(document.getElementById('fac_text').value)">Result</button>
+    <h3>your result is : <span id="result"></span></h3>
+</div>
+<script type="text/javascript">
+document.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        document.getElementById("btn").click();
+    }
+});
+
+function factorial(val) {
+    if (val == 0) {
+        alert('Pleaes Enter value greater than 0');
+        return true;
+    }
+    var result = val;
+    for (var i = 1; i <= val - 1; i++) {
+        result = result * i;
+    }
+    document.getElementById('result').innerHTML = result;
+
+}
+</script>
+
+</html
